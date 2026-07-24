@@ -7,7 +7,19 @@
 
   // ── State ──
   var map, eras = [], geoLayers = {}, activeEra = null;
-  var modernBorderLayer, labelsLayer;
+  var modernBorderLayer, labelsLayer, eventMarkersLayer;
+
+  // ── Event type icons ──
+  var eventIcons = {
+    foundation: '🏛️', battle: '⚔️', political: '📜',
+    cultural: '🎨', diplomatic: '🤝', expansion: '↗️',
+    rebellion: '🔥', fall: '💀'
+  };
+  var eventColors = {
+    foundation: '#d2991d', battle: '#e74c3c', political: '#3498db',
+    cultural: '#2ecc71', diplomatic: '#9b59b6', expansion: '#e67e22',
+    rebellion: '#e74c3c', fall: '#7f8c8d'
+  };
 
   // ── Base map layers ──
   var baseLayers = {
@@ -135,6 +147,10 @@
 
     // Load GeoJSON layer
     loadEraLayer(era);
+
+    // Show timeline events
+    showTimelineEvents(era);
+    buildEventsList(era);
   }
 
   // ── Load GeoJSON for an era ──
@@ -280,7 +296,83 @@
     });
   }
 
-  // ── Start ──
-  document.addEventListener('DOMContentLoaded', init);
+  // ── Show timeline events on map ──
+  function showTimelineEvents(era) {
+    if (eventMarkersLayer) map.removeLayer(eventMarkersLayer);
+    eventMarkersLayer = L.layerGroup();
+
+    var eraEvents = (typeof TIMELINE_EVENTS !== 'undefined')
+      ? TIMELINE_EVENTS.filter(function(e) { return e.era === era.id; })
+      : [];
+
+    eraEvents.forEach(function(evt) {
+      var color = eventColors[evt.type] || '#d2991d';
+      var icon = eventIcons[evt.type] || '📌';
+
+      var marker = L.circleMarker([evt.lat, evt.lng], {
+        radius: 8,
+        fillColor: color,
+        fillOpacity: 0.7,
+        color: '#fff',
+        weight: 1.5,
+        opacity: 0.9
+      });
+
+      marker.bindTooltip(
+        '<strong>' + icon + ' ' + evt.title + '</strong>' +
+        '<br><small>' + fmtYear(evt.year) + '</small>' +
+        (evt.desc ? '<br>' + evt.desc : ''),
+        { className: 'event-tooltip', direction: 'top', offset: [0, -10] }
+      );
+
+      marker.on('click', function() {
+        map.setView([evt.lat, evt.lng], Math.max(map.getZoom(), 6));
+      });
+
+      eventMarkersLayer.addLayer(marker);
+    });
+
+    eventMarkersLayer.addTo(map);
+  }
+
+  // ── Build events list panel ──
+  function buildEventsList(era) {
+    var list = document.getElementById('eventsList');
+    var eraEvents = (typeof TIMELINE_EVENTS !== 'undefined')
+      ? TIMELINE_EVENTS.filter(function(e) { return e.era === era.id; })
+      : [];
+
+    if (!eraEvents.length) {
+      list.innerHTML = '<p class=\"placeholder\">등록된 사건이 없습니다</p>';
+      return;
+    }
+
+    // Sort by year
+    eraEvents.sort(function(a, b) { return a.year - b.year; });
+
+    var html = '';
+    eraEvents.forEach(function(evt) {
+      var icon = eventIcons[evt.type] || '📌';
+      html +=
+        '<div class=\"event-item\" data-lat=\"' + evt.lat + '\" data-lng=\"' + evt.lng + '\">' +
+          '<span class=\"event-icon\">' + icon + '</span>' +
+          '<div class=\"event-content\">' +
+            '<div class=\"event-title\">' + evt.title + '</div>' +
+            '<div class=\"event-year\">' + fmtYear(evt.year) + '</div>' +
+            (evt.desc ? '<div class=\"event-desc\">' + evt.desc + '</div>' : '') +
+          '</div>' +
+        '</div>';
+    });
+    list.innerHTML = html;
+
+    // Click to fly to event location
+    list.addEventListener('click', function(e) {
+      var item = e.target.closest('.event-item');
+      if (!item) return;
+      var lat = parseFloat(item.getAttribute('data-lat'));
+      var lng = parseFloat(item.getAttribute('data-lng'));
+      map.setView([lat, lng], Math.max(map.getZoom(), 6));
+    });
+  }
 
 })();
