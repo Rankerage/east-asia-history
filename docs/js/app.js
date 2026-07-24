@@ -1,16 +1,14 @@
 // ============================================
 // 역사강역도 — Historical Atlas Map Engine
-// 책고보(Chaekgobo) research-based
-// 태행산맥 기선 · 사료 교차인용
+// 책고보(Chaekgobo) 연구 기반 · 태행산맥 기선
+// 전 국가 목록 · 사료 교차인용
 // ============================================
 (function() {
   'use strict';
 
-  // ── State ──
   var map, eras = [], geoLayers = {}, activeEra = null;
-  var modernBorderLayer, labelsLayer, eventMarkersLayer, placesLayer;
+  var modernBorderLayer, labelsLayer, eventMarkersLayer, placesLayer, activeState = null;
 
-  // ── Event type icons ──
   var eventIcons = {
     foundation: '🏛️', battle: '⚔️', political: '📜',
     cultural: '🎨', diplomatic: '🤝', expansion: '↗️',
@@ -22,7 +20,6 @@
     rebellion: '#e74c3c', fall: '#7f8c8d'
   };
 
-  // ── Base map layers ──
   var baseLayers = {
     '🌙 Dark': L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
@@ -38,22 +35,21 @@
     })
   };
 
-  var DEFAULT_CENTER = [40.0, 122.0];
+  var DEFAULT_CENTER = [40.0, 118.0];
   var DEFAULT_ZOOM = 5;
 
-  // ── Init ──
   function init() {
     map = L.map('map', { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM, zoomControl: true, preferCanvas: true });
     baseLayers['🌙 Dark'].addTo(map);
     L.control.layers(baseLayers, {}, {position: 'topright', collapsed: true}).addTo(map);
     loadEras().then(function() {
-      buildEraNav();
+      buildStatesList();
       buildTimeline();
       loadModernBorders();
       loadLabels();
       bindControls();
       document.getElementById('loading').classList.add('hidden');
-      selectEra(3);
+      selectEra(4); // Default: 고구려 전성기
     });
   }
 
@@ -68,20 +64,62 @@
     return y + '년';
   }
 
-  function buildEraNav() {
-    var nav = document.getElementById('eraNav');
-    var html = '';
-    eras.forEach(function(era, i) {
-      html += '<div class="era-btn" data-idx="' + i + '" data-id="' + era.id + '">' +
-        '<span class="era-dot" style="background:' + era.color + '"></span>' +
-        '<span class="era-name">' + era.name_ko + '</span>' +
-        '<span class="era-year">' + fmtYear(era.start_year) + '~' + fmtYear(era.end_year) + '</span></div>';
+  // ── Build state list grouped by region ──
+  function buildStatesList() {
+    var container = document.getElementById('statesList');
+    if (typeof ALL_STATES === 'undefined') return;
+
+    // Group by region
+    var regions = {};
+    ALL_STATES.forEach(function(s) {
+      if (!regions[s.region]) regions[s.region] = [];
+      regions[s.region].push(s);
     });
-    nav.innerHTML = html;
-    nav.addEventListener('click', function(e) {
-      var btn = e.target.closest('.era-btn');
-      if (!btn) return;
-      selectEra(parseInt(btn.getAttribute('data-idx')));
+
+    var regionOrder = ['한국', '중국', '일본', '동남아', '스텝', '기타'];
+    var html = '';
+    regionOrder.forEach(function(region) {
+      if (!regions[region]) return;
+      html += '<div class="state-group">';
+      html += '<div class="state-group-header">' + region + '</div>';
+      regions[region].forEach(function(s) {
+        var eraIdx = -1;
+        for (var i = 0; i < eras.length; i++) {
+          if (eras[i].id === s.era) { eraIdx = i; break; }
+        }
+        html += '<div class="state-item" data-era-idx="' + eraIdx + '" data-name="' + s.name + '" data-peak="' + s.peak + '">' +
+          '<span class="state-dot" style="background:' + s.color + '"></span>' +
+          '<span class="state-name">' + s.name + '</span>' +
+          '<span class="state-peak">' + s.peak + '</span>' +
+          '</div>';
+      });
+      html += '</div>';
+    });
+    container.innerHTML = html;
+
+    // Click handler
+    container.addEventListener('click', function(e) {
+      var item = e.target.closest('.state-item');
+      if (!item) return;
+      var idx = parseInt(item.getAttribute('data-era-idx'));
+      var name = item.getAttribute('data-name');
+      var peak = item.getAttribute('data-peak');
+      if (idx >= 0 && idx < eras.length) {
+        selectEra(idx, name, peak);
+      }
+    });
+
+    // Search
+    document.getElementById('stateSearch').addEventListener('input', function() {
+      var q = this.value.toLowerCase();
+      document.querySelectorAll('.state-item').forEach(function(item) {
+        var name = item.getAttribute('data-name').toLowerCase();
+        item.style.display = (!q || name.indexOf(q) >= 0) ? '' : 'none';
+      });
+      document.querySelectorAll('.state-group').forEach(function(g) {
+        var visible = g.querySelectorAll('.state-item[style*="display: none"]').length < g.querySelectorAll('.state-item').length;
+        g.style.display = visible ? '' : 'none';
+      });
     });
   }
 
@@ -95,19 +133,37 @@
     slider.addEventListener('input', function() { selectEra(parseInt(this.value)); });
   }
 
-  function selectEra(idx) {
+  function selectEra(idx, stateName, statePeak) {
     if (idx < 0 || idx >= eras.length) return;
     var era = eras[idx];
     activeEra = era;
-    document.querySelectorAll('.era-btn').forEach(function(b, i) { b.classList.toggle('active', i === idx); });
+
+    // Update state list highlight
+    document.querySelectorAll('.state-item').forEach(function(item) {
+      var itemIdx = parseInt(item.getAttribute('data-era-idx'));
+      item.classList.toggle('active', itemIdx === idx);
+    });
+
     document.getElementById('timelineSlider').value = idx;
 
+    // Update info panel
     var panel = document.getElementById('infoPanel');
-    panel.innerHTML =
-      '<div class="info-title"><span class="info-color" style="background:' + era.color + '"></span>' +
-      era.name_ko + ' <small>(' + era.name_en + ')</small></div>' +
-      '<div class="info-desc"><strong>시기:</strong> ' + fmtYear(era.start_year) +
-      ' ~ ' + fmtYear(era.end_year) + '<br>' + era.description + '</div>';
+    if (stateName) {
+      panel.innerHTML =
+        '<div class="info-title"><span class="info-color" style="background:' + era.color + '"></span>' +
+        stateName + ' — 전성기 ' + statePeak + '</div>' +
+        '<div class="info-desc"><strong>시대:</strong> ' + era.name_ko + ' (' + fmtYear(era.start_year) + ' ~ ' + fmtYear(era.end_year) + ')<br>' +
+        era.description + '</div>';
+    } else {
+      panel.innerHTML =
+        '<div class="info-title"><span class="info-color" style="background:' + era.color + '"></span>' +
+        era.name_ko + ' <small>(' + era.name_en + ')</small></div>' +
+        '<div class="info-desc"><strong>시기:</strong> ' + fmtYear(era.start_year) + ' ~ ' + fmtYear(era.end_year) + '<br>' +
+        era.description + '</div>';
+    }
+
+    // Update timeline title
+    document.getElementById('timelineTitle').innerHTML = '⏳ 시대 이동 — <strong>' + era.name_ko + '</strong>';
 
     loadEraLayer(era);
     showTimelineEvents(era);
@@ -131,12 +187,7 @@
           if (feature.properties && feature.properties.name_ko) {
             var tip = '<span style="color:' + (feature.properties.color || era.color) + ';font-weight:700;font-size:12px;text-shadow:0 0 6px rgba(0,0,0,0.8);">' +
               feature.properties.name_ko + '</span>';
-            l.bindTooltip(tip, {
-              className: 'state-label',
-              permanent: true,
-              direction: 'center',
-              opacity: 0.9
-            });
+            l.bindTooltip(tip, { className: 'state-label', permanent: true, direction: 'center', opacity: 0.9 });
           }
         }
       }).addTo(map);
@@ -158,15 +209,14 @@
   }
 
   function loadLabels() {
-    var cities = [
-      {name:'평양',lat:39.03,lng:125.75},{name:'국내성(집안)',lat:41.12,lng:126.18},
-      {name:'졸본(환인)',lat:41.27,lng:125.35},{name:'서울',lat:37.57,lng:126.98},
-      {name:'경주',lat:35.84,lng:129.21},{name:'부여(농안)',lat:44.99,lng:126.03},
-      {name:'책성(심양)',lat:41.80,lng:123.43},{name:'북경',lat:39.90,lng:116.40},
-      {name:'산동(제남)',lat:36.67,lng:116.98},{name:'광개토대왕릉비',lat:41.15,lng:126.22},
-      {name:'상경용천부',lat:44.05,lng:129.13}
-    ];
     labelsLayer = L.layerGroup();
+    var cities = [
+      {name:'평양',lat:39.03,lng:125.75},{name:'베이징(서경)',lat:39.90,lng:116.40},
+      {name:'국내성(집안)',lat:41.12,lng:126.18},{name:'졸본(환인)',lat:41.27,lng:125.35},
+      {name:'경주',lat:35.84,lng:129.21},{name:'부여(농안)',lat:44.99,lng:126.03},
+      {name:'상경용천부',lat:44.05,lng:129.13},{name:'산동(제남)',lat:36.67,lng:116.98},
+      {name:'탕산(개경)',lat:39.60,lng:118.20},{name:'안시성',lat:39.90,lng:116.70}
+    ];
     cities.forEach(function(c) {
       L.circleMarker([c.lat, c.lng], { radius: 4, fillColor: '#d2991d', fillOpacity: 0.8, color: '#d2991d', weight: 1, opacity: 0.6 })
         .bindTooltip(c.name, { className: 'era-tooltip', direction: 'top', offset: [0, -6] }).addTo(labelsLayer);
@@ -195,7 +245,6 @@
     });
   }
 
-  // ── Timeline events on map ──
   function showTimelineEvents(era) {
     if (eventMarkersLayer) map.removeLayer(eventMarkersLayer);
     eventMarkersLayer = L.layerGroup();
@@ -238,12 +287,10 @@
     });
   }
 
-  // ── Historical places with cross-referenced sources ──
   function showPlaces(era) {
     if (placesLayer) map.removeLayer(placesLayer);
     placesLayer = L.layerGroup();
     if (typeof HISTORICAL_PLACES === 'undefined') return;
-
     var eraPlaces = HISTORICAL_PLACES.filter(function(p) { return p.era.indexOf(era.id) >= 0; });
     eraPlaces.forEach(function(p) {
       var marker = L.circleMarker([p.lat, p.lng], {
@@ -273,6 +320,5 @@
     placesLayer.addTo(map);
   }
 
-  // ── Start ──
   document.addEventListener('DOMContentLoaded', init);
 })();

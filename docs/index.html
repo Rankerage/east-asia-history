@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>역사강역도 — Historical Atlas</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<link rel="stylesheet" href="css/style.css?v=1" />
+<link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 <body>
 
@@ -16,10 +16,16 @@
     <p class="credit">책고보(Chaekgobo) 연구 기반</p>
   </div>
 
-  <div class="era-nav" id="eraNav"></div>
+  <div class="states-panel" id="statesPanel">
+    <div class="states-header">
+      🏛️ 전 국가 목록
+      <input type="text" id="stateSearch" placeholder="국가명 검색..." class="state-search">
+    </div>
+    <div class="states-list" id="statesList"></div>
+  </div>
 
   <div class="info-panel" id="infoPanel">
-    <p class="placeholder">← 시대를 선택하면 강역 정보가 표시됩니다</p>
+    <p class="placeholder">← 국가를 선택하면 강역 정보가 표시됩니다</p>
   </div>
 
   <div class="controls">
@@ -35,7 +41,7 @@
   </div>
 
   <div class="timeline">
-    <div class="timeline-header">⏳ 시대 이동</div>
+    <div class="timeline-header" id="timelineTitle">⏳ 시대 이동</div>
     <input type="range" id="timelineSlider" min="0" max="12" value="0" step="1">
     <div class="timeline-labels" id="timelineLabels"></div>
   </div>
@@ -43,7 +49,7 @@
   <div class="events-panel" id="eventsPanel">
     <div class="events-header">📜 주요 사건</div>
     <div class="events-list" id="eventsList">
-      <p class="placeholder">← 시대를 선택하면 사건이 표시됩니다</p>
+      <p class="placeholder">← 국가를 선택하면 사건이 표시됩니다</p>
     </div>
   </div>
 
@@ -61,8 +67,9 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data/all-states.js?v=1"></script>
 <script src="data/timeline-events.js?v=1"></script>
 <script src="data/historical-places.js?v=1"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>
