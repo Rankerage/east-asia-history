@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "고려",
-        "name_en": "Goryeo",
+        "name_en": "goryeo",
         "color": "#1a5276",
         "opacity": 0.5
       },
@@ -14,40 +14,64 @@
         "coordinates": [
           [
             [
+              113.5,
+              43
+            ],
+            [
+              118,
+              44
+            ],
+            [
               124,
-              41.5
+              43
             ],
             [
-              130,
-              41.5
+              128,
+              44
             ],
             [
-              132,
+              131,
+              43
+            ],
+            [
+              131,
               40
             ],
             [
-              131.5,
-              37.5
+              130,
+              38
             ],
             [
-              129.5,
+              129,
               36
             ],
             [
-              127.5,
+              127,
               35
             ],
             [
               126,
-              34.5
+              34
             ],
             [
               124,
               36
             ],
             [
-              124,
-              41.5
+              121,
+              38
+            ],
+            [
+              116,
+              40
+            ],
+            [
+              113.5,
+              41
+            ],
+            [
+              113.5,
+              43
             ]
           ]
         ]
@@ -57,9 +81,9 @@
       "type": "Feature",
       "properties": {
         "name_ko": "원(元)",
-        "name_en": "Yuan",
+        "name_en": "yuan",
         "color": "#95a5a6",
-        "opacity": 0.35
+        "opacity": 0.3
       },
       "geometry": {
         "type": "Polygon",
@@ -101,7 +125,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "일본",
-        "name_en": "Japan",
+        "name_en": "japan",
         "color": "#e91e63",
         "opacity": 0.25
       },
@@ -136,8 +160,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "유구(琉球)",
-        "name_en": "Ryukyu",
+        "name_ko": "유구",
+        "name_en": "ryukyu",
         "color": "#66bb6a",
         "opacity": 0.2
       },
@@ -172,8 +196,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "대월(大越)",
-        "name_en": "Dai Viet",
+        "name_ko": "대월",
+        "name_en": "vietnam",
         "color": "#e53935",
         "opacity": 0.2
       },
@@ -212,44 +236,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "참파",
-        "name_en": "Champa",
-        "color": "#ff7043",
-        "opacity": 0.2
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              106,
-              18
-            ],
-            [
-              109,
-              18
-            ],
-            [
-              109,
-              14
-            ],
-            [
-              106,
-              14
-            ],
-            [
-              106,
-              18
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name_ko": "크메르(진랍)",
-        "name_en": "Khmer",
+        "name_ko": "크메르",
+        "name_en": "khmer",
         "color": "#ab47bc",
         "opacity": 0.2
       },
@@ -288,8 +276,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "버마(미얀마)",
-        "name_en": "Burma",
+        "name_ko": "버마",
+        "name_en": "burma",
         "color": "#ffa726",
         "opacity": 0.2
       },
@@ -328,8 +316,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "시암(태국)",
-        "name_en": "Siam",
+        "name_ko": "시암",
+        "name_en": "siam",
         "color": "#42a5f5",
         "opacity": 0.2
       },
@@ -365,7 +353,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "마자파힛",
-        "name_en": "Majapahit",
+        "name_en": "majapahit",
         "color": "#ef5350",
         "opacity": 0.2
       },
@@ -401,7 +389,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "대만",
-        "name_en": "Taiwan",
+        "name_en": "taiwan",
         "color": "#78909c",
         "opacity": 0.15
       },

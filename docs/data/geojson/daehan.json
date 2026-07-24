@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "대한제국",
-        "name_en": "Korean Empire",
+        "name_en": "daehan",
         "color": "#f39c12",
         "opacity": 0.5
       },
@@ -61,7 +61,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "청(清)",
-        "name_en": "Qing",
+        "name_en": "qing",
         "color": "#f1c40f",
         "opacity": 0.25
       },
@@ -113,7 +113,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "러시아",
-        "name_en": "Russia",
+        "name_en": "russia",
         "color": "#607d8b",
         "opacity": 0.2
       },
@@ -165,7 +165,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "일본",
-        "name_en": "Japan",
+        "name_en": "japan",
         "color": "#e91e63",
         "opacity": 0.3
       },
@@ -201,7 +201,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "대만",
-        "name_en": "Taiwan",
+        "name_en": "taiwan",
         "color": "#78909c",
         "opacity": 0.2
       },
@@ -236,8 +236,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "대월(大越)",
-        "name_en": "Dai Viet",
+        "name_ko": "대월",
+        "name_en": "vietnam",
         "color": "#e53935",
         "opacity": 0.2
       },
@@ -276,8 +276,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "크메르(진랍)",
-        "name_en": "Khmer",
+        "name_ko": "크메르",
+        "name_en": "khmer",
         "color": "#ab47bc",
         "opacity": 0.2
       },
@@ -316,8 +316,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "버마(미얀마)",
-        "name_en": "Burma",
+        "name_ko": "버마",
+        "name_en": "burma",
         "color": "#ffa726",
         "opacity": 0.2
       },
@@ -356,8 +356,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "시암(태국)",
-        "name_en": "Siam",
+        "name_ko": "시암",
+        "name_en": "siam",
         "color": "#42a5f5",
         "opacity": 0.2
       },

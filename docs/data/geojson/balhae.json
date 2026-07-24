@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "발해",
-        "name_en": "Balhae",
+        "name_en": "balhae",
         "color": "#d35400",
         "opacity": 0.5
       },
@@ -14,20 +14,24 @@
         "coordinates": [
           [
             [
-              117,
+              113.5,
               48
+            ],
+            [
+              118,
+              50
             ],
             [
               125,
-              49
+              50
             ],
             [
               132,
-              48.5
+              48
             ],
             [
               135,
-              48
+              45
             ],
             [
               135,
@@ -38,8 +42,8 @@
               40
             ],
             [
-              130.5,
-              38.5
+              130,
+              38
             ],
             [
               129,
@@ -50,23 +54,23 @@
               37
             ],
             [
-              125,
-              38.5
+              124,
+              39
             ],
             [
-              122,
-              41
+              120,
+              42
             ],
             [
-              118.5,
+              116,
               44
             ],
             [
-              117,
+              113.5,
               46
             ],
             [
-              117,
+              113.5,
               48
             ]
           ]
@@ -77,7 +81,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "통일신라",
-        "name_en": "Unified Silla",
+        "name_en": "silla_u",
         "color": "#2ecc71",
         "opacity": 0.4
       },
@@ -121,9 +125,9 @@
       "type": "Feature",
       "properties": {
         "name_ko": "당(唐)",
-        "name_en": "Tang",
+        "name_en": "tang",
         "color": "#2980b9",
-        "opacity": 0.3
+        "opacity": 0.25
       },
       "geometry": {
         "type": "Polygon",
@@ -169,7 +173,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "왜(倭)",
-        "name_en": "Wa/Yamato",
+        "name_en": "wa",
         "color": "#e91e63",
         "opacity": 0.25
       },
@@ -204,8 +208,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "유구(琉球)",
-        "name_en": "Ryukyu",
+        "name_ko": "유구",
+        "name_en": "ryukyu",
         "color": "#66bb6a",
         "opacity": 0.2
       },
@@ -240,8 +244,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "대월(大越)",
-        "name_en": "Dai Viet",
+        "name_ko": "대월",
+        "name_en": "vietnam",
         "color": "#e53935",
         "opacity": 0.2
       },
@@ -280,8 +284,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "크메르(진랍)",
-        "name_en": "Khmer",
+        "name_ko": "크메르",
+        "name_en": "khmer",
         "color": "#ab47bc",
         "opacity": 0.2
       },
@@ -321,7 +325,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "스리위자야",
-        "name_en": "Srivijaya",
+        "name_en": "srivijaya",
         "color": "#26a69a",
         "opacity": 0.2
       },

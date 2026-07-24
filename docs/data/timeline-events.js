@@ -26,7 +26,7 @@ var TIMELINE_EVENTS = [
   {era:"goguryeo_late",year:427,lat:39.03,lng:125.75,title:"평양 천도",desc:"장수왕, 평양으로 천도. 남진정책 본격화.",type:"political"},
   {era:"goguryeo_late",year:475,lat:37.50,lng:127.10,title:"한성 함락",desc:"장수왕, 백제 한성 함락. 개로왕 전사.",type:"battle"},
   {era:"goguryeo_late",year:612,lat:39.70,lng:126.00,title:"살수대첩",desc:"을지문덕, 수 양제 30만 별동대 궤멸.",type:"battle"},
-  {era:"goguryeo_late",year:645,lat:40.65,lng:122.85,title:"안시성 전투",desc:"양만춘, 당 태종의 공격 방어 성공.",type:"battle"},
+  {era:"goguryeo_late",year:645,lat:39.90,lng:116.70,title:"안시성 전투",desc:"양만춘, 당 태종의 공격 방어 성공.",type:"battle"},
   {era:"goguryeo_late",year:668,lat:39.03,lng:125.75,title:"고구려 멸망",desc:"나당연합군에 의한 평양성 함락.",type:"fall"},
 
   // ── 백제 ──
@@ -63,7 +63,7 @@ var TIMELINE_EVENTS = [
   {era:"goryeo_late",year:1232,lat:37.60,lng:126.50,title:"강화 천도",desc:"몽골 침입에 강화도로 수도를 옮김.",type:"political"},
   {era:"goryeo_late",year:1270,lat:37.97,lng:126.55,title:"개경 환도",desc:"원에 항복. 삼별초는 진도·제주로 저항.",type:"political"},
   {era:"goryeo_late",year:1356,lat:39.00,lng:125.75,title:"쌍성총관부 회복",desc:"공민왕, 원의 쌍성총관부 공격하여 수복.",type:"expansion"},
-  {era:"goryeo_late",year:1388,lat:39.50,lng:125.50,title:"위화도 회군",desc:"이성계, 요동 정벌 중 회군. 정권 장악.",type:"political"},
+  {era:"goryeo_late",year:1388,lat:39.90,lng:116.40,title:"위화도 회군",desc:"이성계, 요동 정벌 중 회군. 정권 장악.",type:"political"},
   {era:"goryeo_late",year:1392,lat:37.97,lng:126.55,title:"고려 멸망",desc:"이성계, 조선 건국.",type:"fall"},
 
   // ── 조선 전기 ──

@@ -7,7 +7,7 @@
     "end_year": -108,
     "color": "#c49a3c",
     "geojson": "gojoseon.json",
-    "description": "동아시아 고대. 고조선(금)+흉노+한(漢)+월남·크메르·시암."
+    "description": "태행산맥(113.5°E) 이동 전역. 왕검성=심양-요양. 서계=난하~태행산맥. (책고보 연구)"
   },
   {
     "id": "buyeo",
@@ -17,7 +17,7 @@
     "end_year": 494,
     "color": "#8b4513",
     "geojson": "buyeo.json",
-    "description": "부여(갈색)+고구려(적색)+한(漢)+선비+동남아."
+    "description": "송화강 유역 대제국. 남쪽 고구려, 서쪽 선비. 고구려·백제 왕실의 근원지."
   },
   {
     "id": "goguryeo_early",
@@ -27,7 +27,7 @@
     "end_year": 313,
     "color": "#c0392b",
     "geojson": "goguryeo_early.json",
-    "description": "삼국 초기. 고구려(적)+백제(보라·요서/한반도)+신라(녹)+가야(주황)+위(魏)+왜+동남아."
+    "description": "삼국 초기. 고구려 서계=태행산맥. 백제 본토=요서·산동. 신라=경주 소국."
   },
   {
     "id": "goguryeo_late",
@@ -37,7 +37,7 @@
     "end_year": 668,
     "color": "#e74c3c",
     "geojson": "goguryeo_late.json",
-    "description": "삼국 전성기. 고구려(적)+백제(보라)+신라(녹)+가야+수(隋)+왜+동남아 전역."
+    "description": "전성기. 고구려 서계=태행산맥, 안시성=베이징 근방. 백제=요서·산동 + 한반도 거점."
   },
   {
     "id": "baekje",
@@ -47,7 +47,7 @@
     "end_year": 660,
     "color": "#8e44ad",
     "geojson": "baekje.json",
-    "description": "백제 중심. 백제(보라)=요서·산동+한반도 거점, 고구려(적)+신라(녹)+가야+왜+동남아."
+    "description": "백제 실질적 본토=요서·산동(보라), 한반도 서남부=교역 거점. (책고보 연구)"
   },
   {
     "id": "silla_early",
@@ -57,7 +57,7 @@
     "end_year": 668,
     "color": "#27ae60",
     "geojson": "silla_early.json",
-    "description": "신라 중심. 신라(녹)+고구려(적)+백제(보라)+가야+당(唐)+왜+동남아."
+    "description": "신라=경주 분지 소국. 고구려·백제가 동아시아 주도."
   },
   {
     "id": "silla_late",
@@ -67,7 +67,7 @@
     "end_year": 935,
     "color": "#2ecc71",
     "geojson": "silla_late.json",
-    "description": "남북국. 통일신라(녹)+발해(주황)+당(청)+왜+유구+동남아."
+    "description": "통일신라=대동강 이남. 발해=고구려 계승국, 서계 태행산맥."
   },
   {
     "id": "balhae",
@@ -77,7 +77,7 @@
     "end_year": 926,
     "color": "#d35400",
     "geojson": "balhae.json",
-    "description": "발해 중심. 발해(주황)+통일신라(녹)+당(청)+왜+유구+동남아."
+    "description": "해동성국 발해. 고구려 영토 계승. 서계=태행산맥, 북계=흑룡강."
   },
   {
     "id": "goryeo_early",
@@ -87,7 +87,7 @@
     "end_year": 1170,
     "color": "#1a5276",
     "geojson": "goryeo_early.json",
-    "description": "고려 전기. 고려(청)+송(녹)+요(회색)+금(은색)+일본+유구+동남아+대만."
+    "description": "고려 전기. 서경=베이징, 개경=탕산. 서계=태행산맥. (책고보 연구)"
   },
   {
     "id": "goryeo_late",
@@ -97,7 +97,7 @@
     "end_year": 1392,
     "color": "#2980b9",
     "geojson": "goryeo_late.json",
-    "description": "고려 후기. 고려(청)+원(회색)+일본+유구+대월·크메르·시암·버마·마자파힛."
+    "description": "고려 후기. 원 간섭기에도 베이징~산동 영토 유지. 공민왕 회복."
   },
   {
     "id": "joseon_early",
@@ -107,7 +107,7 @@
     "end_year": 1637,
     "color": "#c0392b",
     "geojson": "joseon_early.json",
-    "description": "조선 전기. 조선(적)+명(주황)+청(노랑)+몽골+일본+유구+동남아 전역."
+    "description": "조선 전기. 4군6진으로 압록강~두만강 경계."
   },
   {
     "id": "joseon_late",
@@ -117,7 +117,7 @@
     "end_year": 1897,
     "color": "#e74c3c",
     "geojson": "joseon_late.json",
-    "description": "조선 후기. 조선(적)+청(노랑)+러시아(군청)+일본+유구+동남아."
+    "description": "조선 후기. 청 속국 체제. 실학·개항기."
   },
   {
     "id": "daehan",
@@ -127,6 +127,6 @@
     "end_year": 1910,
     "color": "#f39c12",
     "geojson": "daehan.json",
-    "description": "대한제국(1897~1910). 대한제국(금)+청+러시아+일본+대만+동남아."
+    "description": "대한제국(1897~1910). 간도·독도 포함. 경술국치로 멸망."
   }
 ]

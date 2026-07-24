@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "고조선",
-        "name_en": "Gojoseon",
+        "name_en": "gojoseon",
         "color": "#c49a3c",
         "opacity": 0.5
       },
@@ -15,34 +15,30 @@
           [
             [
               113.5,
-              42.5
+              44
             ],
             [
               120,
-              43.5
+              45
             ],
             [
               125,
-              44
+              45
             ],
             [
               130,
               43
             ],
             [
-              130.5,
-              40.5
+              130,
+              40
             ],
             [
-              129.5,
-              38.5
+              129,
+              38
             ],
             [
-              128,
-              37
-            ],
-            [
-              126.5,
+              127,
               36
             ],
             [
@@ -51,15 +47,15 @@
             ],
             [
               119,
-              35.5
+              36
             ],
             [
               113.5,
-              37
+              38
             ],
             [
               113.5,
-              42.5
+              44
             ]
           ]
         ]
@@ -69,7 +65,7 @@
       "type": "Feature",
       "properties": {
         "name_ko": "흉노",
-        "name_en": "Xiongnu",
+        "name_en": "xiongnu",
         "color": "#8d6e63",
         "opacity": 0.2
       },
@@ -108,8 +104,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "대월(大越)",
-        "name_en": "Dai Viet",
+        "name_ko": "대월",
+        "name_en": "vietnam",
         "color": "#e53935",
         "opacity": 0.2
       },
@@ -148,8 +144,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "시암(태국)",
-        "name_en": "Siam",
+        "name_ko": "시암",
+        "name_en": "siam",
         "color": "#42a5f5",
         "opacity": 0.2
       },
@@ -184,8 +180,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "크메르(진랍)",
-        "name_en": "Khmer",
+        "name_ko": "크메르",
+        "name_en": "khmer",
         "color": "#ab47bc",
         "opacity": 0.2
       },
