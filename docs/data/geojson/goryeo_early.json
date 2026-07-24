@@ -4,28 +4,26 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "고려 (전기)",
-        "name_en": "Goryeo (Early)",
-        "era": "goryeo_early",
-        "year_range": "918-1170",
+        "name_ko": "고려",
+        "name_en": "Goryeo",
         "color": "#1a5276",
-        "description": "고려 전기. 압록강~원산만 이남. 거란·여진과 대치."
+        "opacity": 0.5
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              124.0,
+              124,
               41.5
             ],
             [
-              130.0,
+              130,
               41.5
             ],
             [
-              132.0,
-              40.0
+              132,
+              40
             ],
             [
               131.5,
@@ -33,23 +31,447 @@
             ],
             [
               129.5,
-              36.0
+              36
             ],
             [
               127.5,
-              35.0
+              35
             ],
             [
-              126.0,
+              126,
               34.5
             ],
             [
-              124.0,
-              36.0
+              124,
+              36
             ],
             [
-              124.0,
+              124,
               41.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "송(宋)",
+        "name_en": "Song",
+        "color": "#2ecc71",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100,
+              42
+            ],
+            [
+              122,
+              42
+            ],
+            [
+              122,
+              32
+            ],
+            [
+              108,
+              22
+            ],
+            [
+              100,
+              22
+            ],
+            [
+              95,
+              30
+            ],
+            [
+              100,
+              42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "요(遼)",
+        "name_en": "Liao",
+        "color": "#7f8c8d",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108,
+              50
+            ],
+            [
+              128,
+              50
+            ],
+            [
+              128,
+              42
+            ],
+            [
+              118,
+              40
+            ],
+            [
+              108,
+              42
+            ],
+            [
+              108,
+              50
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "금(金)",
+        "name_en": "Jin",
+        "color": "#bdc3c7",
+        "opacity": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108,
+              50
+            ],
+            [
+              130,
+              50
+            ],
+            [
+              130,
+              42
+            ],
+            [
+              118,
+              38
+            ],
+            [
+              108,
+              40
+            ],
+            [
+              108,
+              50
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "일본",
+        "name_en": "Japan",
+        "color": "#e91e63",
+        "opacity": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              129.5,
+              34
+            ],
+            [
+              132,
+              34
+            ],
+            [
+              132,
+              30
+            ],
+            [
+              129.5,
+              30
+            ],
+            [
+              129.5,
+              34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "유구(琉球)",
+        "name_en": "Ryukyu",
+        "color": "#66bb6a",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126,
+              28
+            ],
+            [
+              129,
+              28
+            ],
+            [
+              129,
+              24
+            ],
+            [
+              126,
+              24
+            ],
+            [
+              126,
+              28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "대월(大越)",
+        "name_en": "Dai Viet",
+        "color": "#e53935",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              23.5
+            ],
+            [
+              109,
+              23.5
+            ],
+            [
+              109,
+              17
+            ],
+            [
+              106,
+              16
+            ],
+            [
+              102,
+              18
+            ],
+            [
+              102,
+              23.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "참파",
+        "name_en": "Champa",
+        "color": "#ff7043",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106,
+              18
+            ],
+            [
+              109,
+              18
+            ],
+            [
+              109,
+              14
+            ],
+            [
+              106,
+              14
+            ],
+            [
+              106,
+              18
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "크메르(진랍)",
+        "name_en": "Khmer",
+        "color": "#ab47bc",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              18
+            ],
+            [
+              109,
+              18
+            ],
+            [
+              109,
+              13
+            ],
+            [
+              104,
+              11
+            ],
+            [
+              100,
+              13
+            ],
+            [
+              102,
+              18
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "버마(미얀마)",
+        "name_en": "Burma",
+        "color": "#ffa726",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              92,
+              28
+            ],
+            [
+              100,
+              28
+            ],
+            [
+              100,
+              18
+            ],
+            [
+              95,
+              16
+            ],
+            [
+              92,
+              20
+            ],
+            [
+              92,
+              28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "스리위자야",
+        "name_en": "Srivijaya",
+        "color": "#26a69a",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95,
+              8
+            ],
+            [
+              105,
+              8
+            ],
+            [
+              105,
+              -5
+            ],
+            [
+              95,
+              -5
+            ],
+            [
+              95,
+              8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "대만",
+        "name_en": "Taiwan",
+        "color": "#78909c",
+        "opacity": 0.15
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120,
+              25.5
+            ],
+            [
+              122,
+              25.5
+            ],
+            [
+              122,
+              21.5
+            ],
+            [
+              120,
+              21.5
+            ],
+            [
+              120,
+              25.5
             ]
           ]
         ]

@@ -6,70 +6,348 @@
       "properties": {
         "name_ko": "발해",
         "name_en": "Balhae",
-        "era": "balhae",
-        "year_range": "698-926",
         "color": "#d35400",
-        "description": "고구려 계승 해동성국. 만주 전역+연해주+한반도 북부. 서계 요서까지."
+        "opacity": 0.5
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
             [
-              117.0,
-              48.0
+              117,
+              48
             ],
             [
-              125.0,
-              49.0
+              125,
+              49
             ],
             [
-              132.0,
+              132,
               48.5
             ],
             [
-              135.0,
-              48.0
+              135,
+              48
             ],
             [
-              135.0,
-              43.0
+              135,
+              43
             ],
             [
-              132.0,
-              40.0
+              132,
+              40
             ],
             [
               130.5,
               38.5
             ],
             [
-              129.0,
-              37.0
+              129,
+              37
             ],
             [
-              127.0,
-              37.0
+              127,
+              37
             ],
             [
-              125.0,
+              125,
               38.5
             ],
             [
-              122.0,
-              41.0
+              122,
+              41
             ],
             [
               118.5,
-              44.0
+              44
             ],
             [
-              117.0,
-              46.0
+              117,
+              46
             ],
             [
-              117.0,
-              48.0
+              117,
+              48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "통일신라",
+        "name_en": "Unified Silla",
+        "color": "#2ecc71",
+        "opacity": 0.4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              124,
+              39
+            ],
+            [
+              129.5,
+              39
+            ],
+            [
+              129.5,
+              35.5
+            ],
+            [
+              128,
+              34
+            ],
+            [
+              126,
+              34
+            ],
+            [
+              124,
+              36
+            ],
+            [
+              124,
+              39
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "당(唐)",
+        "name_en": "Tang",
+        "color": "#2980b9",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95,
+              45
+            ],
+            [
+              125,
+              45
+            ],
+            [
+              128,
+              40
+            ],
+            [
+              122,
+              30
+            ],
+            [
+              108,
+              22
+            ],
+            [
+              95,
+              22
+            ],
+            [
+              90,
+              32
+            ],
+            [
+              95,
+              45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "왜(倭)",
+        "name_en": "Wa/Yamato",
+        "color": "#e91e63",
+        "opacity": 0.25
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              129.5,
+              34
+            ],
+            [
+              132,
+              34
+            ],
+            [
+              132,
+              30
+            ],
+            [
+              129.5,
+              30
+            ],
+            [
+              129.5,
+              34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "유구(琉球)",
+        "name_en": "Ryukyu",
+        "color": "#66bb6a",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126,
+              28
+            ],
+            [
+              129,
+              28
+            ],
+            [
+              129,
+              24
+            ],
+            [
+              126,
+              24
+            ],
+            [
+              126,
+              28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "대월(大越)",
+        "name_en": "Dai Viet",
+        "color": "#e53935",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              23.5
+            ],
+            [
+              109,
+              23.5
+            ],
+            [
+              109,
+              17
+            ],
+            [
+              106,
+              16
+            ],
+            [
+              102,
+              18
+            ],
+            [
+              102,
+              23.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "크메르(진랍)",
+        "name_en": "Khmer",
+        "color": "#ab47bc",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              18
+            ],
+            [
+              109,
+              18
+            ],
+            [
+              109,
+              13
+            ],
+            [
+              104,
+              11
+            ],
+            [
+              100,
+              13
+            ],
+            [
+              102,
+              18
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "스리위자야",
+        "name_en": "Srivijaya",
+        "color": "#26a69a",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              95,
+              8
+            ],
+            [
+              105,
+              8
+            ],
+            [
+              105,
+              -5
+            ],
+            [
+              95,
+              -5
+            ],
+            [
+              95,
+              8
             ]
           ]
         ]

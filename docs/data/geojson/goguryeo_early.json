@@ -4,12 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name_ko": "고구려 (전기)",
-        "name_en": "Goguryeo (Early)",
-        "era": "goguryeo_early",
-        "year_range": "-37-313",
-        "color": "#c0392b",
-        "description": "졸본→국내성 시기. 요동 전역을 장악하고 서쪽으로 태행산맥까지 영향력 행사."
+        "name_ko": "고구려",
+        "name_en": "Goguryeo",
+        "color": "#e74c3c",
+        "opacity": 0.5
       },
       "geometry": {
         "type": "Polygon",
@@ -17,47 +15,475 @@
           [
             [
               113.5,
-              42.5
+              48
             ],
             [
-              120.0,
-              43.5
+              118,
+              49
             ],
             [
-              125.0,
-              44.0
+              125,
+              49.5
             ],
             [
-              129.0,
-              43.0
+              132,
+              48.5
+            ],
+            [
+              135,
+              46
+            ],
+            [
+              135,
+              43
+            ],
+            [
+              132,
+              40.5
+            ],
+            [
+              130.5,
+              38.5
+            ],
+            [
+              129,
+              36.5
+            ],
+            [
+              127,
+              35
+            ],
+            [
+              124,
+              35
+            ],
+            [
+              121.5,
+              35.5
+            ],
+            [
+              118.5,
+              37
+            ],
+            [
+              113.5,
+              38.5
+            ],
+            [
+              113.5,
+              48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "백제",
+        "name_en": "Baekje",
+        "color": "#8e44ad",
+        "opacity": 0.4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.5,
+              41.5
+            ],
+            [
+              120,
+              42
+            ],
+            [
+              123,
+              40
+            ],
+            [
+              122.5,
+              37.5
+            ],
+            [
+              119,
+              35
+            ],
+            [
+              116.5,
+              35
+            ],
+            [
+              113.5,
+              36.5
+            ],
+            [
+              113.5,
+              41.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "신라",
+        "name_en": "Silla",
+        "color": "#27ae60",
+        "opacity": 0.4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.5,
+              37
+            ],
+            [
+              130,
+              37
+            ],
+            [
+              130.5,
+              35.5
             ],
             [
               129.5,
-              40.0
+              34.5
             ],
             [
-              128.0,
-              38.5
+              127.5,
+              34.5
+            ],
+            [
+              127,
+              35.5
+            ],
+            [
+              127.5,
+              37
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "가야",
+        "name_en": "Gaya",
+        "color": "#f39c12",
+        "opacity": 0.35
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              127.8,
+              35.5
+            ],
+            [
+              128.5,
+              35.5
+            ],
+            [
+              128.5,
+              34.8
+            ],
+            [
+              127.8,
+              34.8
+            ],
+            [
+              127.8,
+              35.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "위(魏)",
+        "name_en": "Wei",
+        "color": "#7f8c8d",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100,
+              42
+            ],
+            [
+              125,
+              42
+            ],
+            [
+              125,
+              35
+            ],
+            [
+              110,
+              22
+            ],
+            [
+              100,
+              22
+            ],
+            [
+              95,
+              30
+            ],
+            [
+              100,
+              42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "왜(倭)",
+        "name_en": "Wa/Yamato",
+        "color": "#e91e63",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              129.5,
+              34
+            ],
+            [
+              132,
+              34
+            ],
+            [
+              132,
+              30
+            ],
+            [
+              129.5,
+              30
+            ],
+            [
+              129.5,
+              34
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "선비",
+        "name_en": "Xianbei",
+        "color": "#795548",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105,
+              55
+            ],
+            [
+              125,
+              55
+            ],
+            [
+              125,
+              46
+            ],
+            [
+              108,
+              44
+            ],
+            [
+              105,
+              50
+            ],
+            [
+              105,
+              55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "대월(大越)",
+        "name_en": "Dai Viet",
+        "color": "#e53935",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              23.5
+            ],
+            [
+              109,
+              23.5
+            ],
+            [
+              109,
+              17
+            ],
+            [
+              106,
+              16
+            ],
+            [
+              102,
+              18
+            ],
+            [
+              102,
+              23.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "크메르(진랍)",
+        "name_en": "Khmer",
+        "color": "#ab47bc",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102,
+              18
+            ],
+            [
+              109,
+              18
+            ],
+            [
+              109,
+              13
+            ],
+            [
+              104,
+              11
+            ],
+            [
+              100,
+              13
+            ],
+            [
+              102,
+              18
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "시암(태국)",
+        "name_en": "Siam",
+        "color": "#42a5f5",
+        "opacity": 0.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              97,
+              21
+            ],
+            [
+              102,
+              21
+            ],
+            [
+              102,
+              13
+            ],
+            [
+              97,
+              13
+            ],
+            [
+              97,
+              21
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "백제 (한반도 거점)",
+        "name_en": "Baekje (Peninsula Outpost)",
+        "color": "#8e44ad",
+        "opacity": 0.3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              126,
+              37
+            ],
+            [
+              128.5,
+              37
+            ],
+            [
+              129,
+              35.5
+            ],
+            [
+              128,
+              34
+            ],
+            [
+              126,
+              34
             ],
             [
               125.5,
-              38.0
+              35.5
             ],
             [
-              124.0,
-              38.5
+              126,
+              37
             ],
             [
-              120.0,
-              39.0
-            ],
-            [
-              113.5,
-              40.0
-            ],
-            [
-              113.5,
-              42.5
+              126,
+              37
             ]
           ]
         ]
