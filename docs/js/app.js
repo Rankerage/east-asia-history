@@ -129,10 +129,14 @@
         },
         onEachFeature: function(feature, l) {
           if (feature.properties && feature.properties.name_ko) {
-            var tip = '<strong>' + feature.properties.name_ko + '</strong>' +
-              (feature.properties.description ? '<br>' + feature.properties.description : '') +
-              '<br><small>' + feature.properties.year_range + '</small>';
-            l.bindTooltip(tip, { className: 'era-tooltip', sticky: true, direction: 'top' });
+            var tip = '<span style="color:' + (feature.properties.color || era.color) + ';font-weight:700;font-size:12px;text-shadow:0 0 6px rgba(0,0,0,0.8);">' +
+              feature.properties.name_ko + '</span>';
+            l.bindTooltip(tip, {
+              className: 'state-label',
+              permanent: true,
+              direction: 'center',
+              opacity: 0.9
+            });
           }
         }
       }).addTo(map);

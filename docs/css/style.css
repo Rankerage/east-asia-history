@@ -347,6 +347,18 @@ body {
 .source-name { font-size: 10px; font-weight: 700; color: #d2991d; }
 .source-quote { font-size: 10px; color: var(--text2); line-height: 1.4; padding-left: 4px; border-left: 2px solid var(--border); margin-top: 2px; }
 
+/* ── Permanent state labels on map ── */
+.state-label {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.state-label::before { display: none !important; }
+
 /* ── Sidebar Footer ── */
 .sidebar-footer {
   padding: 12px 18px;
