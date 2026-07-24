@@ -1,0 +1,322 @@
+/* ============================================
+   역사강역도 — Historical Atlas
+   Dark theme, sidebar layout
+   ============================================ */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text2: #8b949e;
+  --accent: #58a6ff;
+  --gold: #d2991d;
+  --red: #da3633;
+  --green: #3fb950;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Sidebar ── */
+#sidebar {
+  width: 340px;
+  min-width: 340px;
+  height: 100vh;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  padding: 20px 18px 12px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #1a1f2e, var(--bg2));
+}
+
+.sidebar-header h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+.credit {
+  font-size: 10px;
+  color: var(--accent);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* ── Era Navigation ── */
+.era-nav {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.era-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  font-size: 13px;
+  color: var(--text2);
+}
+
+.era-btn:hover {
+  background: var(--bg3);
+  color: var(--text);
+}
+
+.era-btn.active {
+  background: var(--bg3);
+  border-color: var(--border);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.era-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.era-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.era-year {
+  font-size: 10px;
+  color: var(--text2);
+  white-space: nowrap;
+}
+
+/* ── Info Panel ── */
+.info-panel {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  flex: 1;
+  min-height: 100px;
+}
+
+.info-panel .placeholder {
+  color: var(--text2);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.info-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.info-desc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.info-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ── Controls ── */
+.controls {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text2);
+  cursor: pointer;
+}
+
+.toggle input { accent-color: var(--accent); }
+
+.btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+
+.btn:hover { background: var(--border); }
+
+/* ── Timeline ── */
+.timeline {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-header {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+#timelineSlider {
+  width: 100%;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.timeline-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+/* ── Sidebar Footer ── */
+.sidebar-footer {
+  padding: 12px 18px;
+  font-size: 9px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.sidebar-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Map ── */
+#map {
+  flex: 1;
+  height: 100vh;
+  background: #1a1f2e;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  background: #1a1f2e !important;
+  font-family: inherit !important;
+}
+
+.leaflet-control-zoom a {
+  background: var(--bg2) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(13,17,23,0.8) !important;
+  color: var(--text2) !important;
+  font-size: 9px !important;
+}
+
+/* ── Loading overlay ── */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s;
+}
+
+#loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#loading p {
+  margin-top: 16px;
+  color: var(--text2);
+  font-size: 14px;
+}
+
+/* ── Map tooltip ── */
+.era-tooltip {
+  background: var(--bg2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 12px !important;
+  color: var(--text) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+.era-tooltip strong {
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: 45vh;
+    overflow-y: auto;
+  }
+  #map { height: 55vh; }
+  body { flex-direction: column; }
+}

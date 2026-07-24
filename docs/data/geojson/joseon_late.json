@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "조선 (후기)",
+        "name_en": "Joseon Late",
+        "era": "joseon_late",
+        "year_range": "1637-1897",
+        "color": "#e74c3c",
+        "description": "책고보 연구 기반 조선 (후기) 강역 (상세 조정 필요)",
+        "_note": "PLACEHOLDER — 실제 강역 데이터로 교체 필요"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              [
+                124,
+                43
+              ],
+              [
+                131,
+                43
+              ],
+              [
+                131,
+                38
+              ],
+              [
+                124,
+                38
+              ],
+              [
+                124,
+                43
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

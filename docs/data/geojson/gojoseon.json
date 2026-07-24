@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "고조선",
+        "name_en": "Gojoseon",
+        "era": "gojoseon",
+        "year_range": "2333BC--108",
+        "color": "#c49a3c",
+        "description": "책고보 연구 기반 고조선 강역 (상세 조정 필요)",
+        "_note": "PLACEHOLDER — 실제 강역 데이터로 교체 필요"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              [
+                117,
+                44
+              ],
+              [
+                125,
+                48
+              ],
+              [
+                130,
+                44
+              ],
+              [
+                128,
+                40
+              ],
+              [
+                124,
+                38
+              ],
+              [
+                117,
+                40
+              ],
+              [
+                117,
+                44
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

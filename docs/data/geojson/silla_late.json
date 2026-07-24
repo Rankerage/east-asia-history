@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name_ko": "통일신라",
+        "name_en": "Silla Late",
+        "era": "silla_late",
+        "year_range": "668-935",
+        "color": "#2ecc71",
+        "description": "책고보 연구 기반 통일신라 강역 (상세 조정 필요)",
+        "_note": "PLACEHOLDER — 실제 강역 데이터로 교체 필요"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              [
+                125,
+                38
+              ],
+              [
+                129.5,
+                38
+              ],
+              [
+                129.5,
+                34
+              ],
+              [
+                126,
+                34
+              ],
+              [
+                125,
+                38
+              ]
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

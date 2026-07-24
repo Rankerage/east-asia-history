@@ -1,0 +1,132 @@
+[
+  {
+    "id": "gojoseon",
+    "name_ko": "고조선",
+    "name_en": "Gojoseon",
+    "start_year": -2333,
+    "end_year": -108,
+    "color": "#c49a3c",
+    "geojson": "gojoseon.json",
+    "description": "책고보 연구: 고조선의 실제 강역은 요동~요서를 중심으로 한반도 북부와 만주 지역에 걸쳐 있었다."
+  },
+  {
+    "id": "buyeo",
+    "name_ko": "부여",
+    "name_en": "Buyeo",
+    "start_year": -200,
+    "end_year": 494,
+    "color": "#8b4513",
+    "geojson": "buyeo.json",
+    "description": "책고보 연구: 부여는 만주 중북부의 대제국으로, 고구려와 백제의 모체가 되었다."
+  },
+  {
+    "id": "goguryeo_early",
+    "name_ko": "고구려 (전기)",
+    "name_en": "Goguryeo (Early)",
+    "start_year": -37,
+    "end_year": 313,
+    "color": "#c0392b",
+    "geojson": "goguryeo_early.json",
+    "description": "책고보 연구: 졸본-국내성 시기. 이미 요동을 장악한 강대국이었다."
+  },
+  {
+    "id": "goguryeo_late",
+    "name_ko": "고구려 (후기·전성기)",
+    "name_en": "Goguryeo (Late·Golden Age)",
+    "start_year": 313,
+    "end_year": 668,
+    "color": "#e74c3c",
+    "geojson": "goguryeo_late.json",
+    "description": "책고보 연구: 평양 천도 후 전성기. 만주 전역+한반도 중북부+요동·요서+산동 일부까지 지배. 한반도 남부는 고구려의 변방 산악지대였다."
+  },
+  {
+    "id": "baekje",
+    "name_ko": "백제",
+    "name_en": "Baekje",
+    "start_year": -18,
+    "end_year": 660,
+    "color": "#8e44ad",
+    "geojson": "baekje.json",
+    "description": "책고보 연구: 백제의 근거지는 요서·산동 지역. 한반도 서남부는 해상교역 거점이었다."
+  },
+  {
+    "id": "silla_early",
+    "name_ko": "신라 (전기)",
+    "name_en": "Silla (Early)",
+    "start_year": -57,
+    "end_year": 668,
+    "color": "#27ae60",
+    "geojson": "silla_early.json",
+    "description": "책고보 연구: 진한 소국연맹. 경주 분지의 소국에 불과했다."
+  },
+  {
+    "id": "silla_late",
+    "name_ko": "통일신라",
+    "name_en": "Unified Silla",
+    "start_year": 668,
+    "end_year": 935,
+    "color": "#2ecc71",
+    "geojson": "silla_late.json",
+    "description": "책고보 연구: 당과 연합했으나 실제 영토는 한반도 중남부에 국한. 만주는 발해가 계승."
+  },
+  {
+    "id": "balhae",
+    "name_ko": "발해",
+    "name_en": "Balhae",
+    "start_year": 698,
+    "end_year": 926,
+    "color": "#d35400",
+    "geojson": "balhae.json",
+    "description": "책고보 연구: 고구려 계승국. 만주 전역+연해주+한반도 북부를 지배한 대제국."
+  },
+  {
+    "id": "goryeo_early",
+    "name_ko": "고려 (전기)",
+    "name_en": "Goryeo (Early)",
+    "start_year": 918,
+    "end_year": 1170,
+    "color": "#1a5276",
+    "geojson": "goryeo_early.json",
+    "description": "책고보 연구: 고려 전기 강역은 압록강~원산만 이남. 만주 지역은 거란·여진이 지배."
+  },
+  {
+    "id": "goryeo_late",
+    "name_ko": "고려 (후기·원간섭기)",
+    "name_en": "Goryeo (Late·Yuan)",
+    "start_year": 1170,
+    "end_year": 1392,
+    "color": "#2980b9",
+    "geojson": "goryeo_late.json",
+    "description": "책고보 연구: 원 간섭기. 쌍성총관부, 동녕부 등 원의 직할령이 한반도 북부에 설치."
+  },
+  {
+    "id": "joseon_early",
+    "name_ko": "조선 (전기)",
+    "name_en": "Joseon (Early)",
+    "start_year": 1392,
+    "end_year": 1637,
+    "color": "#c0392b",
+    "geojson": "joseon_early.json",
+    "description": "책고보 연구: 조선 전기 4군6진. 압록강-두만강 이남."
+  },
+  {
+    "id": "joseon_late",
+    "name_ko": "조선 (후기)",
+    "name_en": "Joseon (Late)",
+    "start_year": 1637,
+    "end_year": 1897,
+    "color": "#e74c3c",
+    "geojson": "joseon_late.json",
+    "description": "책고보 연구: 청의 속국 체제. 강역 변동 없음."
+  },
+  {
+    "id": "daehan",
+    "name_ko": "대한제국",
+    "name_en": "Korean Empire",
+    "start_year": 1897,
+    "end_year": 1910,
+    "color": "#f39c12",
+    "geojson": "daehan.json",
+    "description": "책고보 연구: 간도·독도 포함한 대한제국 강역."
+  }
+]

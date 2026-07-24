@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>역사강역도 — Historical Atlas</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="css/style.css?v=1" />
+</head>
+<body>
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <h1>🗺️ 역사강역도</h1>
+    <p class="subtitle">Historical Territorial Atlas</p>
+    <p class="credit">책고보(Chaekgobo) 연구 기반</p>
+  </div>
+
+  <div class="era-nav" id="eraNav"></div>
+
+  <div class="info-panel" id="infoPanel">
+    <p class="placeholder">← 시대를 선택하면 강역 정보가 표시됩니다</p>
+  </div>
+
+  <div class="controls">
+    <label class="toggle">
+      <input type="checkbox" id="showModern" checked>
+      현대국경 표시
+    </label>
+    <label class="toggle">
+      <input type="checkbox" id="showLabels" checked>
+      지명 표시
+    </label>
+    <button id="resetBtn" class="btn">🔄 지도 초기화</button>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-header">⏳ 시대 이동</div>
+    <input type="range" id="timelineSlider" min="0" max="12" value="0" step="1">
+    <div class="timeline-labels" id="timelineLabels"></div>
+  </div>
+
+  <div class="sidebar-footer">
+    <p>데이터 출처: 삼국사기·삼국유사·중국사서·대청광여도·대명여지도</p>
+    <p>기반연구: <a href="https://www.youtube.com/@chaekgobo" target="_blank">유튜브 '책고보'</a></p>
+  </div>
+</div>
+
+<div id="map"></div>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p>지도 로딩중...</p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
