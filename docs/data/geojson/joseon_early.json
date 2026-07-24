@@ -9,7 +9,7 @@
         "era": "joseon_early",
         "year_range": "1392-1637",
         "color": "#c0392b",
-        "description": "조선 전기. 4군6진으로 압록강~두만강 경계 확정. 임진왜란·병자호란."
+        "description": "조선 전기. 4군6진으로 압록강~두만강 경계 확정."
       },
       "geometry": {
         "type": "Polygon",

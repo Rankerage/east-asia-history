@@ -9,7 +9,7 @@
         "era": "daehan",
         "year_range": "1897-1910",
         "color": "#f39c12",
-        "description": "대한제국. 간도·독도 포함. 1910년 경술국치로 멸망."
+        "description": "대한제국. 간도·독도 포함."
       },
       "geometry": {
         "type": "Polygon",
@@ -67,7 +67,7 @@
         "era": "daehan",
         "year_range": "1897-1910",
         "color": "#f39c12",
-        "description": "대한제국. 간도·독도 포함. 1910년 경술국치로 멸망."
+        "description": "대한제국. 간도·독도 포함."
       },
       "geometry": {
         "type": "Polygon",
