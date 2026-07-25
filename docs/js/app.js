@@ -7,7 +7,7 @@
   'use strict';
 
   var map, eras = [], geoLayers = {}, activeEra = null;
-  var modernBorderLayer, labelsLayer, eventMarkersLayer, placesLayer, activeState = null;
+  var modernBorderLayer, labelsLayer, eventMarkersLayer, placesLayer, mapLabelsLayer, activeState = null;
 
   var eventIcons = {
     foundation: '🏛️', battle: '⚔️', political: '📜',
