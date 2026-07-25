@@ -78,140 +78,24 @@
               55
             ],
             [
-              125,
+              110,
               55
             ],
             [
-              125,
-              45
+              110,
+              48
             ],
             [
-              100,
-              45
-            ],
-            [
-              90,
+              95,
               48
             ],
             [
               90,
+              50
+            ],
+            [
+              90,
               55
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name_ko": "대월",
-        "name_en": "vietnam",
-        "color": "#e53935",
-        "opacity": 0.2
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              102,
-              23.5
-            ],
-            [
-              109,
-              23.5
-            ],
-            [
-              109,
-              17
-            ],
-            [
-              106,
-              16
-            ],
-            [
-              102,
-              18
-            ],
-            [
-              102,
-              23.5
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name_ko": "시암",
-        "name_en": "siam",
-        "color": "#42a5f5",
-        "opacity": 0.2
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              97,
-              21
-            ],
-            [
-              102,
-              21
-            ],
-            [
-              102,
-              13
-            ],
-            [
-              97,
-              13
-            ],
-            [
-              97,
-              21
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name_ko": "크메르",
-        "name_en": "khmer",
-        "color": "#ab47bc",
-        "opacity": 0.2
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              102,
-              18
-            ],
-            [
-              109,
-              18
-            ],
-            [
-              109,
-              13
-            ],
-            [
-              104,
-              11
-            ],
-            [
-              100,
-              13
-            ],
-            [
-              102,
-              18
             ]
           ]
         ]

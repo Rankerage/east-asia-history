@@ -6,12 +6,12 @@ var ALL_STATES = [
   // === 한국사 (Korean) ===
   {name:'고조선', era:'gojoseon', peak:'기원전 10세기', region:'한국', color:'#c49a3c'},
   {name:'부여', era:'buyeo', peak:'기원전 1세기', region:'한국', color:'#8b4513'},
-  {name:'고구려', era:'goguryeo_late', peak:'5세기(광개토대왕)', region:'한국', color:'#e74c3c'},
-  {name:'백제', era:'baekje', peak:'4세기(근초고왕)', region:'한국', color:'#8e44ad'},
-  {name:'신라', era:'silla_late', peak:'8세기(경덕왕)', region:'한국', color:'#2ecc71'},
+  {name:'고구려', era:'goguryeo_late', peak:'사막까지 정복(5세기)', region:'한국', color:'#e74c3c'},
+  {name:'백제', era:'baekje', peak:'산동반도 대제국(4세기)', region:'한국', color:'#8e44ad'},
+  {name:'신라', era:'silla_late', peak:'양자강대제국(8세기)', region:'한국', color:'#2ecc71'},
   {name:'가야', era:'goguryeo_early', peak:'5세기', region:'한국', color:'#f39c12'},
   {name:'발해', era:'balhae', peak:'8세기(문왕)', region:'한국', color:'#d35400'},
-  {name:'고려', era:'goryeo_early', peak:'11세기(문종)', region:'한국', color:'#1a5276'},
+  {name:'고려', era:'goryeo_early', peak:'중국대륙제국(11세기)', region:'한국', color:'#1a5276'},
   {name:'조선', era:'joseon_early', peak:'15세기(세종)', region:'한국', color:'#c0392b'},
   {name:'대한제국', era:'daehan', peak:'1900년(광무)', region:'한국', color:'#f39c12'},
 
