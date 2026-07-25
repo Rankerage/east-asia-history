@@ -136,12 +136,11 @@ body {
   flex-shrink: 0;
 }
 .state-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.state-peak {
-  font-size: 9px;
-  color: var(--text2);
-  white-space: nowrap;
-  opacity: 0.7;
-}
+.state-peak { font-size: 9px; color: var(--text2); white-space: nowrap; opacity: 0.7; }
+
+/* ── Map text labels ── */
+.map-text-label { pointer-events: none; }
+.map-text-label span { font-family: 'Noto Sans KR', sans-serif; }
 
 /* ── Era Navigation (legacy, hidden) ── */
 .era-nav { display: none; }
