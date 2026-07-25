@@ -169,6 +169,7 @@
     showTimelineEvents(era);
     buildEventsList(era);
     showPlaces(era);
+    showMapLabels(era);
   }
 
   function loadEraLayer(era) {
@@ -318,6 +319,32 @@
       placesLayer.addLayer(marker);
     });
     placesLayer.addTo(map);
+  }
+
+  // ── Show all map text labels ──
+  function showMapLabels(era) {
+    if (mapLabelsLayer) map.removeLayer(mapLabelsLayer);
+    mapLabelsLayer = L.layerGroup();
+    if (typeof MAP_LABELS === 'undefined') return;
+
+    var labels = !era ? MAP_LABELS : MAP_LABELS.filter(function(p) {
+      return p.era.indexOf(era.id) >= 0;
+    });
+    if (!era) labels = MAP_LABELS;
+
+    labels.forEach(function(p) {
+      var icon = L.divIcon({
+        className: 'map-text-label',
+        html: '<span style="font-size:9px;color:#d2991d;text-shadow:0 0 4px rgba(0,0,0,0.9);white-space:nowrap;opacity:0.7;">' + p.name + '</span>',
+        iconSize: [0, 0], iconAnchor: [0, 0]
+      });
+      var m = L.marker([p.lat, p.lng], { icon: icon, interactive: true });
+      m.bindTooltip('<strong>' + p.name + '</strong> <small>' + p.hanja + '</small>',
+        { className: 'place-tooltip', direction: 'top', offset: [0, -6] });
+      m.on('click', function() { map.setView([p.lat, p.lng], Math.max(map.getZoom(), 7)); });
+      mapLabelsLayer.addLayer(m);
+    });
+    mapLabelsLayer.addTo(map);
   }
 
   document.addEventListener('DOMContentLoaded', init);
