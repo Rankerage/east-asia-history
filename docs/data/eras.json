@@ -7,7 +7,7 @@
     "end_year": -108,
     "color": "#c49a3c",
     "geojson": "gojoseon.json",
-    "description": "태행산맥 이동 전역. 왕검성=심양-요양. 요동·요서·산동 포함 대제국."
+    "description": "태행산맥 이동 전역. 왕검성=심양·요양. 요동·요서·산동·하북 포함."
   },
   {
     "id": "buyeo",
@@ -17,7 +17,7 @@
     "end_year": 494,
     "color": "#8b4513",
     "geojson": "buyeo.json",
-    "description": "송화강 유역 만주 대제국. 북부여·동부여 연맹체."
+    "description": "송화강 유역 만주 대제국. 남쪽 고구려, 서쪽 선비."
   },
   {
     "id": "goguryeo_early",
@@ -27,7 +27,7 @@
     "end_year": 313,
     "color": "#c0392b",
     "geojson": "goguryeo_early.json",
-    "description": "삼국 초기. 고구려=서쪽 사막(100°E)까지, 백제=산동반도 전역, 신라=양자강(30°N) 일대."
+    "description": "고구려=사막까지(100°E), 백제=산동·요서(NO 한반도), 신라=양자강(NO 한반도), 가야=중국남부·하이난."
   },
   {
     "id": "goguryeo_late",
@@ -37,7 +37,7 @@
     "end_year": 668,
     "color": "#e74c3c",
     "geojson": "goguryeo_late.json",
-    "description": "전성기. 고구려=북경이북+만주+사막까지. 백제=산동반도. 신라=양자강대제국."
+    "description": "고구려=북경이북+만주+사막. 백제=산동반도. 신라=양자강대제국. 가야=중국남부."
   },
   {
     "id": "baekje",
@@ -47,7 +47,7 @@
     "end_year": 660,
     "color": "#8e44ad",
     "geojson": "baekje.json",
-    "description": "백제=산동반도(+요서·하북) 대제국. 한반도 서남부=해상교역 거점."
+    "description": "백제=산동반도+요서+하북 대제국. 한반도에 들어온 적 없음. (책고보)"
   },
   {
     "id": "silla_early",
@@ -57,7 +57,7 @@
     "end_year": 668,
     "color": "#27ae60",
     "geojson": "silla_early.json",
-    "description": "신라=양자강 일대 대제국. 고구려=사막까지, 백제=산동반도."
+    "description": "신라=양자강 일대 대제국. 한반도에 들어온 적 없음. (책고보)"
   },
   {
     "id": "silla_late",
@@ -67,7 +67,7 @@
     "end_year": 935,
     "color": "#2ecc71",
     "geojson": "silla_late.json",
-    "description": "통일신라=양자강 유역+한반도. 발해=고구려 계승, 서계 사막까지."
+    "description": "통일신라=양자강 유역. 발해=고구려 계승, 서계 사막까지."
   },
   {
     "id": "balhae",
@@ -87,7 +87,7 @@
     "end_year": 1170,
     "color": "#1a5276",
     "geojson": "goryeo_early.json",
-    "description": "고려=중국대륙 거의 전체(95~132°E, 28~52°N). 서경=베이징, 남경=항주 일대."
+    "description": "고려=중국대륙 거의 전체(28~52°N). 서경=베이징, 남경=항주."
   },
   {
     "id": "goryeo_late",
@@ -97,7 +97,7 @@
     "end_year": 1392,
     "color": "#2980b9",
     "geojson": "goryeo_late.json",
-    "description": "고려=원 간섭기에도 대륙 영토 유지. 공민왕 회복."
+    "description": "고려=원 간섭기에도 대륙 영토 유지."
   },
   {
     "id": "joseon_early",
@@ -107,7 +107,7 @@
     "end_year": 1637,
     "color": "#c0392b",
     "geojson": "joseon_early.json",
-    "description": "조선=압록강~두만강 경계. 명·청·일본과 접경."
+    "description": "조선=압록강~두만강 경계."
   },
   {
     "id": "joseon_late",

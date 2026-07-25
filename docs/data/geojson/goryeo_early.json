@@ -444,42 +444,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name_ko": "대만",
-        "name_en": "taiwan",
-        "color": "#78909c",
-        "opacity": 0.15
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              120,
-              25.5
-            ],
-            [
-              122,
-              25.5
-            ],
-            [
-              122,
-              21.5
-            ],
-            [
-              120,
-              21.5
-            ],
-            [
-              120,
-              25.5
-            ]
-          ]
-        ]
-      }
     }
   ]
 }
